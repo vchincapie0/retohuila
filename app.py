@@ -18,6 +18,14 @@ app.secret_key='mysecretkey'
 def index():
     return render_template('index.html')
 
+@app.route('/clientes')
+def clientes():
+    return render_template('clientes.html')
+
+@app.route('/cuentas')
+def cuentas():
+    return render_template('cuentas.html')
+
 if __name__=='__main__':
     #Se verifica que se este corriendo la aplicacion.
     app.run(debug=True)

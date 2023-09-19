@@ -1,8 +1,20 @@
 {%extends 'base.html'%}
 
 {%block title%}Clientes{%endblock%}
-
+    
 
 {%block contenido%}
+<h2>Registro de Clientes</h2>
+    <form action="">
+        <label for="cedula">Cédula de Ciudadanía</label>
+        <input type="text" name="cedula" maxlength="10">
 
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" placeholder="Nombre Cliente">
+
+        <label for="telefono">Télefono</label>
+        <input type="text" name="telefono" placeholder="telefono" maxlength="10">
+        
+        <button type="submit">Registrar</button>
+    </form>
 {%endblock%}
