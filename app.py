@@ -1,3 +1,4 @@
+import random as r
 from flask import Flask, render_template, request, redirect,url_for,flash,session
 from flask_mysqldb import MySQL 
 
@@ -35,9 +36,9 @@ def clientes():
 
 @app.route('/cuentas' , methods=('GET','POST'))
 def cuentas():
-    
+    cuentarandom=r.uniform(1000000000,9999999999)
     if request.method == 'POST':
-        
+        cuenta=cuentarandom
         titular = request.form['titular']
         saldo = request.form['saldo']
         fechaapertura = request.form['fechaapertura']

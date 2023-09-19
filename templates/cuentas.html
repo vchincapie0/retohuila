@@ -3,18 +3,27 @@
 {%block title%}Cuentas{%endblock%}
 
 {%block contenido%}
-<h2>Registro de Clientes</h2>
-    <form action="clientes" method="post">
+<h2>Registro de Cuentas</h2>
+    <form action="cuentas" method="post">
         <label for="numCuenta">Número de Cuenta</label>
         <input type="text" name="numCuenta" maxlength="10" readonly>
 
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" placeholder="Nombre Cliente">
+        <label for="titular">Titular</label>
+        <input type="text" name="titular" placeholder="Nombre Titular">
 
-        <label for="telefono">Télefono</label>
-        <input type="text" name="telefono" placeholder="telefono" maxlength="10">
+        <label for="saldo">Saldo</label>
+        <input type="number" name="saldo" placeholder="saldo" maxlength="10">
+
+        <label for="fechaapertura">Fecha de Apertura</label>
+        <input type="date" name="fechaapertura">
+
+        <label for="estado">Estado</label>
+        <select name="estado" id="estado">
+            <option value="Abierto">Abierta</option>
+            <option value="Cerrado">Cerrada</option>
+        </select>
         
-        <button type="submit">Registrar</button>
+        <button type="submit">Registrar Cuenta</button>
     </form>
 
 {%endblock%}
