@@ -3,6 +3,18 @@
 {%block title%}Cuentas{%endblock%}
 
 {%block contenido%}
+<h2>Registro de Clientes</h2>
+    <form action="clientes" method="post">
+        <label for="numCuenta">Número de Cuenta</label>
+        <input type="text" name="numCuenta" maxlength="10" readonly>
 
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" placeholder="Nombre Cliente">
+
+        <label for="telefono">Télefono</label>
+        <input type="text" name="telefono" placeholder="telefono" maxlength="10">
+        
+        <button type="submit">Registrar</button>
+    </form>
 
 {%endblock%}
