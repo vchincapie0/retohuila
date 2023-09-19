@@ -4,26 +4,29 @@
 
 {%block contenido%}
 <h2>Registro de Cuentas</h2>
-    <form action="cuentas" method="post">
-        <label for="numCuenta">Número de Cuenta</label>
-        <input type="text" name="numCuenta" maxlength="10" readonly>
+    <form action="cuentas" method="post" enctype="multipart/form-data">
 
-        <label for="titular">Titular</label>
-        <input type="text" name="titular" placeholder="Nombre Titular">
+        <div class="mb-3">
+            <label for="numCuenta" class="form-label"></div>Número de Cuenta</label>
+            <input type="text" class="form-control" name="numCuenta" maxlength="10" readonly>
 
-        <label for="saldo">Saldo</label>
-        <input type="number" name="saldo" placeholder="saldo" maxlength="10">
+            <label for="titular" class="form-label">Titular</label>
+            <input type="text" class="form-control" name="titular" placeholder="Nombre Titular">
 
-        <label for="fechaapertura">Fecha de Apertura</label>
-        <input type="date" name="fechaapertura">
+            <label for="saldo" class="form-label">Saldo</label>
+            <input type="number"  class="form-control" name="saldo" placeholder="saldo" maxlength="10">
 
-        <label for="estado">Estado</label>
-        <select name="estado" id="estado">
-            <option value="Abierto">Abierta</option>
-            <option value="Cerrado">Cerrada</option>
-        </select>
-        
-        <button type="submit">Registrar Cuenta</button>
+            <label for="fechaapertura" class="form-label">Fecha de Apertura</label>
+            <input type="date" class="form-control" name="fechaapertura">
+
+            <label for="estado" class="form-label">Estado</label>
+            <select name="estado" class="form-control" id="estado">
+                <option value="Abierto">Abierta</option>
+                <option value="Cerrado">Cerrada</option>
+            </select>
+            
+            <button type="submit" class="mt-2 btn btn-primary">Registrar Cuenta</button>
+    </div>
     </form>
 
 {%endblock%}

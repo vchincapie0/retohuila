@@ -17,6 +17,7 @@ app.secret_key='mysecretkey'
 
 @app.route('/')
 def index():
+    
     return render_template('index.html')
 
 @app.route('/clientes', methods=('GET','POST'))
