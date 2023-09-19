@@ -4,17 +4,28 @@
     
 
 {%block contenido%}
-<h2>Registro de Clientes</h2>
+<h2 class="titulo">Registro de Clientes</h2>
     <form action="clientes" method="post">
         <label for="cedula">Cédula de Ciudadanía</label>
+        <br>
         <input type="text" name="cedula" maxlength="10">
-
+        <br>
         <label for="nombre">Nombre</label>
+        <br>
         <input type="text" name="nombre" placeholder="Nombre Cliente">
-
+        <br>
         <label for="telefono">Télefono</label>
+        <br>
         <input type="text" name="telefono" placeholder="telefono" maxlength="10">
-        
+        <br>
         <button type="submit">Registrar</button>
+
+        {%with messages=get_flashed_messages()%}
+        {%if messages%}
+        {%for message in messages%}      
+        <h2>{{message}}</h2>
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
     </form>
 {%endblock%}

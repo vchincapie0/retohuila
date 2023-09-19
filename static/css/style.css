@@ -1,0 +1,63 @@
+/* Funtes */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap');
+
+/* Variables */
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Mukta', sans-serif;
+    font-weight: 700;
+}
+
+p,a,button,label,input{
+    font-family: 'Mukta', sans-serif;
+}
+
+:root{
+    --primary-color: #0e1192;
+    --secondary-color: #fff;
+    --fontS-titulo: 30px;
+    --fontS-subtitulos: 22px;
+    --fontS-parra: 16px; 
+}
+/* General */
+body{
+    background: #fff;
+}
+
+/* Barra navegacion */
+ nav.bg-banco{
+    background: var(--primary-color);
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0;
+    justify-content: space-around;
+ }
+
+nav .navbar-brand {
+    width: 200px;
+    margin-left: 100px;
+}
+
+nav.bg-banco a.nv{
+    margin: 0 15px;
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+nav.bg-banco a.logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+nav.bg-banco a.nv:hover{
+    color: #d0cece;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+/* Estilos para clientes */
+
+h2.titulo{
+    margin-top: 20px;
+}
+

@@ -28,10 +28,16 @@ def clientes():
         telefono = request.form['telefono']
 
         cur=mysql.connection.cursor()
-        cur.execute('INSERT INTO tbl_clientes(cedulaCliente,nombre,telefono) VALUES(%s,%s,%s)',(cedula,nombre,telefono))
-        mysql.connection.commit()
-        flash ('Cliente Registrado')
-        return redirect(url_for('index'))
+        if cedula:
+            cur.execute('SELECT * FROM tbl_clientes WHERE cedulaCliente LIKE %s',[cedula])
+            cliente = cur.fetchone()
+            flash('Usuario ya registrado')
+            return render_template('clientes.html')
+        else:
+            cur.execute('INSERT INTO tbl_clientes(cedulaCliente,nombre,telefono) VALUES(%s,%s,%s)',(cedula,nombre,telefono))
+            mysql.connection.commit()
+            flash ('Cliente Registrado')
+            return redirect(url_for('index'))
 
     return render_template('clientes.html')
 
